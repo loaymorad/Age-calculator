@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- Font Awesome 4 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Include Tailwind CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-400 h-screen flex items-center justify-center">
+
+  <div class="relative container mx-auto bg-white rounded-3xl max-w-xs md:max-w-sm">
+    <div class="bg-white p-5 rounded-3xl">
+      <form class="relative flex" action="">
+        <div class="p-4">
+          <label class="block" for="">Day</label>
+          <input type="number" placeholder="DD" class="in-Day inline w-16 px-1 py-3 text-base leading-relaxed text-gray-700 bg-white bg-clip-padding border border-gray-300 rounded-md transition duration-150 ease-in-out"> 
+        </div>
+
+        <div class="p-4">
+          <label class="block" for="">Month</label>
+          <input type="number" placeholder="MM" class="in-Month inline w-16 px-1 py-3 text-base leading-relaxed text-gray-700 bg-white bg-clip-padding border border-gray-300 rounded-md transition duration-150 ease-in-out">
+        </div>
+
+        <div class="p-4">
+          <label class="block" for="">Year</label>
+          <input type="number" placeholder="YYYY" class="in-Year inline w-16 px-1 py-3 text-base leading-relaxed text-gray-700 bg-white bg-clip-padding border border-gray-300 rounded-md transition duration-150 ease-in-out">  
+        </div>
+      
+      </form>
+
+      <!-- Change type to button to prevent page refresh -->
+      <button type="button" value="Calculate Age" class="result-btn -right-52 md:-right-64 bg-black b-0 w-16 h-16 rounded-full relative">
+          <i class="fa fa-arrow-down fa-2x text-white absolute  right-4 top-4" aria-hidden="true"></i>
+      </button> 
+
+      <p class="error text-red-600" ></p>
+    
+      <div id="result">
+        <h2 class="font-bold text-5xl m-5 ml-12"><span class="yearCount color text-purple-600">--</span>Years</h2>
+        <h2 class="font-bold text-5xl m-5 ml-12"><span class="monthCount color text-purple-600">--</span>Months</h2>
+        <h2 class="font-bold text-5xl m-5 ml-12"><span class="dayCount color text-purple-600">--</span>Days</h2>
+      </div>
+    </div>
+
+  </div>
+
+<!-- Move script tag to the end of the body -->
+<script src="script.js"></script>
+</body>
+</html>
